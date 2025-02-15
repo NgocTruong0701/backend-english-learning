@@ -9,6 +9,7 @@ import { join } from 'path';
 import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handlebars.adapter';
 import databaseConfig from './database/config/database.config';
 import { getTypeOrmConfig } from './database/config/typeorm.config';
+import { CoursesModule } from './courses/courses.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -48,6 +49,7 @@ import { getTypeOrmConfig } from './database/config/typeorm.config';
     }),
     UsersModule,
     AuthModule,
+    CoursesModule,
   ]
 })
 export class AppModule implements NestModule {
